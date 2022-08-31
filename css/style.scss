@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	
+
+}
+
+
+	
+
+@import 'partials/colors';
+@import 'partials/layout';
+@import 'partials/typography';
+@import 'partials/spacing';
+@import 'partials/buttons';
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+body {
+	
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	scroll-behavior: smooth;
+}
+
+
+html, body {
+	overflow-x: hidden;
+}
+
+button {
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+
+	max-width: $container-xl;
+	@include responsive(l) {
+		padding: 0 $spacing-xxxs;
+	}
+	@include responsive(m) {
+		padding: 0 $spacing-xxxs;
+	}
+
+	@include responsive(s) {
+		padding: 0 $spacing-xxxs;
+	}
+	
+
+}
+
+svg,
+img {
+	display: block;
+	max-width: 100%;
+}
+.border {
+	border: 1px solid red;
+}
+
+@import 'partials/menu';
+@import 'partials/swiper';
+@import 'partials/icons';
+@import 'partials/footer';
+@import 'partials/animations';
+@import 'partials/components';
+@import 'partials/home';
+

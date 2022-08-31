@@ -1,0 +1,108 @@
+//Typography of project
+
+@mixin typeface-1($size, $device: desktop) {
+	font-family: 'Nunito', serif;
+	font-weight: 700;
+
+	line-height: 120%;
+
+	@if $size == xl and $device == desktop {
+		font-size: 4.8rem;
+	} @else if $size == xl and $device == mobile {
+		font-size: 4.0rem;
+	} @else if $size == lg and $device == desktop {
+		font-size: 4.0rem;
+	} @else if $size == lg and $device == mobile {
+		font-size: 3.2rem;
+	} @else if $size == md and $device == desktop {
+		font-size: 3.2rem;
+	} @else if $size == md and $device == mobile {
+		font-size: 2.4rem;
+	} @else if $size == sm and $device == desktop {
+		font-size: 2.4rem;
+	} @else if $size == sm and $device == mobile {
+		font-size: 2.0rem;
+	} @else if $size == xxl and $device == desktop {
+		font-size: 6.4rem;
+	} @else if $size == xxl and $device == mobile {
+		font-size: 6.4rem;
+	}
+}
+
+@mixin typeface-2($size: md, $device: desktop) {
+	font-family: 'Nunito', sans-serif;
+	line-height: 150%;
+	font-weight: 400;
+
+	@if $size == xxl and $device == desktop {
+		font-size: 3.2rem;
+	} @else if $size == xxl and $device == mobile {
+		font-size: 3.2rem;
+	} @else if $size == xl and $device == desktop {
+		font-size: 2.4rem;
+	} @else if $size == xl and $device == mobile {
+		font-size: 2.4rem;
+	} @else if $size == lg and $device == desktop {
+		font-size: 2.0rem;
+	} @else if $size == lg and $device == mobile {
+		font-size: 2.0rem;
+	} @else if $size == md and $device == desktop {
+		font-size: 1.6rem;
+	} @else if $size == md and $device == mobile {
+		font-size: 1.6rem;
+	} @else if $size == sm and $device == desktop {
+		font-size: 1.4rem;
+	} @else if $size == sm and $device == mobile {
+		font-size: 1.4rem;
+	} @else if $size == xs and $device == desktop {
+		font-size: 1.2rem;
+	} @else if $size == xs and $device == mobile {
+		font-size: 1.2rem;
+	}
+}
+
+h1 {
+	color: $color-neutral-darkest;
+	@include typeface-1(xl, desktop);
+
+	@include responsive(s) {
+		@include typeface-1(xl, mobile);
+	}
+}
+
+h2 {
+	color: $color-neutral-darkest;
+	@include typeface-1(lg, desktop);
+
+	@include responsive(s) {
+		@include typeface-1(lg, mobile);
+	}
+}
+
+h3 {
+	@include typeface-1(md, desktop);
+
+	@include responsive(s) {
+		@include typeface-1(md, mobile);
+	}
+}
+
+h4 {
+	@include typeface-1(sm, desktop);
+
+	@include responsive(s) {
+		@include typeface-1(sm, mobile);
+	}
+}
+
+p {
+	@include typeface-2(md, desktop);
+
+	@include responsive(s) {
+		@include typeface-2(md, mobile);
+	}
+}
+
+.text-center {
+	text-align: center;
+}

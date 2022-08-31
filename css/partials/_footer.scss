@@ -1,0 +1,31 @@
+footer {
+    height: 8rem;
+    border-top: 0.1rem solid $color-primary-ultralight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer__copy {
+            p {
+                @include typeface-2(sm);
+                display: inline-block;
+                color: $color-neutral-dark;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1.6rem;
+        }
+
+        .footer__media {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2.4rem;
+        }
+
+    }
+}

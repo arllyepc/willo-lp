@@ -1,0 +1,70 @@
+//CARDS
+
+.card-retangular {
+	max-width: 26.7rem; //retirar no responsivo
+	display: flex;
+	flex-direction: column;
+	padding: 3.2rem 2.4rem;
+	gap: 2.4rem;
+	background: $color-neutral-lightest;
+	border: 1px solid $color-neutral-lightest;
+	box-shadow: 0px 1px 2px rgba(80, 81, 255, 0.2);
+	border-radius: 1.6rem;
+
+	@include responsive(s) {
+		max-width: 100%;
+	}
+
+	.card-retangular__icons {
+		display: flex;
+		justify-content: space-between;
+		gap: 0.8rem;
+	}
+
+	.card-retangular__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.8rem;
+	}
+}
+
+.card-primary-icon {
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	.card-primary-icon__title {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		gap: 1.2rem;
+
+		@include responsive(s) {
+			align-items: flex-start;
+
+			img {
+				margin-top: 0.4rem;
+			}
+		}
+
+		h3 {
+			@include typeface-1(sm);
+			color: $color-neutral-darkest;
+			@include responsive(s) {
+				font-weight: 700;
+				font-size: 2rem;
+				line-height: 132%;
+			}
+		}
+	}
+
+	p {
+		@include typeface-2(md);
+		display: block;
+		color: $color-neutral-dark;
+		padding-left: 3.2rem;
+	}
+}
