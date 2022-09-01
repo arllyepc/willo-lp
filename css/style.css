@@ -1193,6 +1193,10 @@ body {
   scroll-behavior: smooth;
 }
 
+section {
+  overflow-x: hidden;
+}
+
 button {
   background-color: transparent;
   cursor: pointer;
