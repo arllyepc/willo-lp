@@ -4,10 +4,24 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include responsive(s) {
+        height: auto;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+    }
+    
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include responsive(s) {
+            flex-direction: column;
+            justify-content: center;
+           
+            
+        }
         .footer__copy {
             p {
                 @include typeface-2(sm);
@@ -18,6 +32,11 @@ footer {
             align-items: center;
             justify-content: flex-start;
             gap: 1.6rem;
+            @include responsive(s) {
+                flex-direction: column;
+                justify-content: center;
+                
+            }
         }
 
         .footer__media {
@@ -25,6 +44,9 @@ footer {
             align-items: center;
             justify-content: flex-start;
             gap: 2.4rem;
+            @include responsive(s) {
+                margin-top: 1.6rem;
+            }
         }
 
     }

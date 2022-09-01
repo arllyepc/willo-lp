@@ -1,9 +1,21 @@
 const menuBtn = document.querySelector('.menu-btn');
 const navbarMobile = document.querySelector('.navbar-mobile');
 const logo = document.querySelector('.logo-desktop');
+const linksMobile = document.querySelectorAll('li');
+linksMobile.forEach((el) => {
+	el.addEventListener('click', (event) => {
+		event.preventDefault();
+		menuBtn.classList.toggle('open');
+		navbarMobile.classList.toggle('active');
+		logo.classList.toggle('active');
+		menuOpen = false;
+		
+	});
+});
+
 let menuOpen = false;
 
-menuScroll = document.querySelector('.menu');
+
 
 menuBtn.addEventListener('click', () => {
 	if (!menuOpen) {
@@ -18,5 +30,3 @@ menuBtn.addEventListener('click', () => {
 		menuOpen = false;
 	}
 });
-
-

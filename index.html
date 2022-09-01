@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
+	
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,30 +17,11 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
 		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<title>Willo</title>
 	</head>
 	<body>
-		<!--
-			<a class="btn-primary-icon-md" href=""
-			>Indicar bairro <img class="icon" src="svg/icons_arrow-right.svg"
-		/></a>
-		<a class="btn-primary-sm" href="">Contato </a>
-		<div class=""></div>
-		-->
-
-		<!--
-			<div class="card-primary-icon">
-			<div class="card-primary-icon__title">
-				<img src="svg/card_icons_cube.svg" alt="Ícone de cubo" />
-				<h3>Aposte na economia e comodidade</h3>
-			</div>
-				<p>
-					Pague uma mensalidade e tenha incluso no valor itens como: água, luz,
-					internet, armários, cortinas, eletrodomésticos sob demanda e mais!
-				</p>
-			
-		</div>
-		-->
+		
 		<header class="menu" data-aos="fade-down">
 			<div class="container">
 				<a href="" class="logo-desktop"
@@ -78,7 +61,7 @@
 
 		<main>
 			<div class="container">
-				<div class="main__text">
+				<div class="main__text" data-aos="fade-right">
 					<img src="svg/branding-slogan.svg" alt="" />
 					<div class="main__imgs__mobile">
 						<img src="img/hero_img1.png" alt="" />
@@ -95,24 +78,38 @@
 							apê ideal!
 						</span>
 					</h1>
-					
 				</div>
 				<div class="main__imgs">
-					<img src="img/hero_img1.png" alt="" />
-					<img src="img/hero_img2.png" alt="" />
-					<img src="img/hero_img3.png" alt="" />
+					<img
+						data-aos="fade-left"
+						data-aos-delay="200"
+						src="img/hero_img1.png"
+						alt=""
+					/>
+					<img
+						data-aos="fade-left"
+						data-aos-delay="400"
+						src="img/hero_img2.png"
+						alt=""
+					/>
+					<img
+						data-aos="fade-left"
+						data-aos-delay="600"
+						src="img/hero_img3.png"
+						alt=""
+					/>
 				</div>
 			</div>
 		</main>
 
 		<section class="s-benefits">
 			<div class="container">
-				<div class="s-benefits__img">
+				<div class="s-benefits__img" data-aos="fade-right">
 					<img
 						src="img/s-benefits_img.png"
 						alt="Foto de pessoas felizes se abraçando"
 					/>
-					<div class="s-benefits__ornament">
+					<div class="s-benefits__ornament" data-aos="fade-right" data-aos-delay="200">
 						<img
 							src="svg/s-benefits_ornament.svg
 						"
@@ -121,7 +118,7 @@
 					</div>
 				</div>
 
-				<div class="s-benefits__list">
+				<div class="s-benefits__list" data-aos="fade-left">
 					<h2>Seu aluguel simplificou</h2>
 					<p class="s-benefits__list__description">
 						É o novo estilo de vida de quem quer morar bem, compartilhando
@@ -129,7 +126,7 @@
 						mais próximo do que você imagina!
 					</p>
 					<ul>
-						<li class="card-primary-icon">
+						<li class="card-primary-icon" data-aos="fade-left" data-aos-delay="200">
 							<div class="card-primary-icon__title">
 								<img src="svg/card_icons_cube.svg" alt="Ícone de cubo" />
 								<h3>Aposte na economia e comodidade</h3>
@@ -140,7 +137,7 @@
 								e mais!
 							</p>
 						</li>
-						<li class="card-primary-icon">
+						<li class="card-primary-icon" data-aos="fade-left" data-aos-delay="400">
 							<div class="card-primary-icon__title">
 								<img src="svg/card_icons_cube.svg" alt="Ícone de cubo" />
 								<h3>Aposte na economia e comodidade</h3>
@@ -151,7 +148,7 @@
 								e mais!
 							</p>
 						</li>
-						<li class="card-primary-icon">
+						<li class="card-primary-icon" data-aos="fade-left" data-aos-delay="600">
 							<div class="card-primary-icon__title">
 								<img src="svg/card_icons_cube.svg" alt="Ícone de cubo" />
 								<h3>Aposte na economia e comodidade</h3>
@@ -169,9 +166,9 @@
 
 		<section class="s-where">
 			<div class="container">
-				<div class="s-where__text">
+				<div class="s-where__text" data-aos="fade-right">
 					<h2>Onde a Willo estará presente?</h2>
-					<div class="swiper-container">
+					<div class="swiper-container" >
 						<div class="s-where__slide swiper-wrapper">
 							<div class="s-where__slide__item swiper-slide">
 								<img src="img/s-where_map.png" alt="" />
@@ -214,9 +211,9 @@
 					</div>
 				</div>
 
-				<div class="s-where__imgs">
+				<div class="s-where__imgs" data-aos="fade-left">
 					<img src="img/s-where_img.png" alt="" />
-					<div class="s-where__imgs__ornament">
+					<div class="s-where__imgs__ornament" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="2000">
 						<img src="svg/s-where_ornament.svg" alt="Ícone de ornamento" />
 					</div>
 				</div>
@@ -225,7 +222,7 @@
 
 		<section class="s-what-is">
 			<div class="container">
-				<div class="s-what-is__text">
+				<div class="s-what-is__text" data-aos="fade-right">
 					<h2>Morar bem é essencial para a qualidade de vida</h2>
 
 					<p>
@@ -234,7 +231,7 @@
 						preciso.
 					</p>
 
-					<div class="s-what-is__card">
+					<div class="s-what-is__card" data-aos="fade-up">
 						<h3>Afinal, o que é Multifamily?</h3>
 						<p>
 							É um novo jeito de morar. São empreendimentos em que todas as
@@ -247,7 +244,7 @@
 					</div>
 				</div>
 
-				<div class="s-what-is__img">
+				<div class="s-what-is__img" data-aos="fade-left">
 					<img src="img/s-what-is_img.png" alt="" />
 				</div>
 			</div>
@@ -258,15 +255,15 @@
 				<h2>Como alugar pela Willo?</h2>
 
 				<div class="s-how__content">
-					<div class="s-how__content__imgs">
+					<div class="s-how__content__imgs" data-aos="fade-right">
 						<img src="img/s-how_img.png" alt="" />
-						<div class="s-how__content__ornament">
+						<div class="s-how__content__ornament" data-aos="fade-right" data-aos-delay="400">
 							<img src="svg/s-how_ornament.svg" alt="" />
 						</div>
 					</div>
 
 					<div class="s-how__content__grid">
-						<div class="card-retangular">
+						<div class="card-retangular" data-aos="zoom-in-down" data-aos-delay="0">
 							<div class="card-retangular__icons">
 								<img src="svg/card_icons_business.svg" alt="" />
 								<img src="svg/card-number-1_outline.svg" alt="" />
@@ -279,7 +276,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="card-retangular">
+						<div class="card-retangular" data-aos="zoom-in-down" data-aos-delay="200">
 							<div class="card-retangular__icons">
 								<img src="svg/card_icons_business.svg" alt="" />
 								<img src="svg/card-number-1_outline.svg" alt="" />
@@ -292,7 +289,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="card-retangular">
+						<div class="card-retangular" data-aos="zoom-in-down" data-aos-delay="400">
 							<div class="card-retangular__icons">
 								<img src="svg/card_icons_business.svg" alt="" />
 								<img src="svg/card-number-1_outline.svg" alt="" />
@@ -305,7 +302,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="card-retangular">
+						<div class="card-retangular" data-aos="zoom-in-down" data-aos-delay="600">
 							<div class="card-retangular__icons">
 								<img src="svg/card_icons_business.svg" alt="" />
 								<img src="svg/card-number-1_outline.svg" alt="" />
@@ -460,20 +457,18 @@
 		<section class="s-newsletter">
 			<div class="container">
 				<div class="s-newsletter__form">
-					<h3>
-						Assine nossa Newsletter e fique por dentro das novidades!
-					</h3>
+					<h3>Assine nossa Newsletter e fique por dentro das novidades!</h3>
 
 					<p>
-						Se interessou pelo jeito Willo de viver e quer saber mais sobre apês por assinatura? Deixe seu e-mail e receba conteúdos exclusivos.
+						Se interessou pelo jeito Willo de viver e quer saber mais sobre apês
+						por assinatura? Deixe seu e-mail e receba conteúdos exclusivos.
 					</p>
 				</div>
 
 				<div class="s-newsletter__img">
-					<img src="img/s-newsletter__img.png" alt="">
+					<img src="img/s-newsletter__img.png" alt="" />
 				</div>
 			</div>
-
 		</section>
 
 		<footer>
@@ -536,5 +531,15 @@
 				content: 'My tooltip!',
 			});
 		</script>
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				easing: 'ease-out-quart',
+				duration: 1000,
+				once: true,
+			});
+		</script>
+		
 	</body>
 </html>

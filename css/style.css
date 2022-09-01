@@ -1186,14 +1186,11 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   width: 100%;
   height: 100vh;
   position: relative;
   scroll-behavior: smooth;
-}
-
-html, body {
-  overflow-x: hidden;
 }
 
 button {
@@ -1447,7 +1444,6 @@ header .container .menu-desktop li:not(:last-child) {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    height: 50vh;
     width: 100vw;
     background: #FFF;
     transition: all 0.3s ease-in-out;
@@ -1518,10 +1514,23 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  footer {
+    height: auto;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+}
 footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  footer .container {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 footer .container .footer__copy {
   display: flex;
@@ -1537,11 +1546,22 @@ footer .container .footer__copy p {
   display: inline-block;
   color: #4D4D4D;
 }
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  footer .container .footer__copy {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 footer .container .footer__media {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 2.4rem;
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  footer .container .footer__media {
+    margin-top: 1.6rem;
+  }
 }
 
 .card-retangular {
@@ -1967,8 +1987,18 @@ main .container .main__imgs {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .container {
+    flex-direction: column;
+  }
+}
 .s-compare .container .s-compare__text {
   max-width: calc(50% - 6rem);
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .container .s-compare__text {
+    max-width: 100%;
+  }
 }
 .s-compare .container .s-compare__text h2 {
   margin-bottom: 1.6rem;
@@ -1981,12 +2011,20 @@ main .container .main__imgs {
   flex-direction: column;
   gap: 4rem;
 }
-.s-compare .s-compare__table {
-  width: calc(50% - 6rem);
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .s-compare__table {
+    width: 100%;
+  }
 }
 .s-compare .s-compare__table .s-compare__table__select {
   width: 100%;
   display: flex;
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .s-compare__table .s-compare__table__select {
+    margin-top: 5.6rem;
+    margin-bottom: 5.6rem;
+  }
 }
 .s-compare .s-compare__table .s-compare__table__select span {
   font-family: "Nunito", sans-serif;
@@ -2016,9 +2054,12 @@ main .container .main__imgs {
 .s-compare .s-compare__table table {
   margin-top: 3.2rem;
   width: 100%;
-  -moz-column-gap: 2.4rem;
-       column-gap: 2.4rem;
-  border-collapse: collapse;
+  border-spacing: 2.4rem 0;
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .s-compare__table table {
+    border-spacing: 1.6rem 0;
+  }
 }
 .s-compare .s-compare__table table th {
   height: 6.4rem;
@@ -2031,14 +2072,32 @@ main .container .main__imgs {
   padding: 1.6rem;
   font-family: "Nunito";
 }
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .s-compare__table table th,
+.s-compare .s-compare__table table tr,
+.s-compare .s-compare__table table td {
+    width: 8.8rem;
+    padding: 0.8rem;
+  }
+}
 .s-compare .s-compare__table table td {
   color: #4D4D4D;
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .s-compare__table table td {
+    font-size: 1.2rem;
+  }
 }
 .s-compare .s-compare__table table .table__th__willo {
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 0.2rem solid #AAAAFF;
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .s-compare__table table .table__th__willo {
+    font-size: 1.4rem;
+  }
 }
 .s-compare .s-compare__table table .table__th__others {
   font-family: "Nunito";
@@ -2050,11 +2109,23 @@ main .container .main__imgs {
   border-bottom: 0.2rem solid #F6AEAE;
   padding: 1.6rem 0;
 }
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .s-compare__table table .table__th__others {
+    font-size: 1.4rem;
+    padding: 0;
+  }
+}
 .s-compare .s-compare__table table .table__th__expenses {
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 150%;
   color: #4D4D4D;
+  border-bottom: 0.2rem solid #C7C7C7;
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .s-compare__table table .table__th__expenses {
+    font-size: 1.4rem;
+  }
 }
 .s-compare .s-compare__table table .table__td__willo,
 .s-compare .s-compare__table table .table__td__others {
@@ -2063,10 +2134,21 @@ main .container .main__imgs {
   font-weight: 400;
   font-size: 1.6rem;
 }
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .s-compare__table table .table__td__willo,
+.s-compare .s-compare__table table .table__td__others {
+    font-size: 1.2rem;
+  }
+}
 .s-compare .s-compare__table table .table__td__expenses {
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 150%;
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-compare .s-compare__table table .table__td__expenses {
+    font-size: 1.2rem;
+  }
 }
 
 .s-newsletter .container {
@@ -2076,15 +2158,31 @@ main .container .main__imgs {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-newsletter .container {
+    flex-direction: column;
+  }
+}
 .s-newsletter .container .s-newsletter__form {
   width: calc(50% - 4rem);
   padding: 5.6rem 0 5.6rem 5.6rem;
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-newsletter .container .s-newsletter__form {
+    width: 100%;
+    padding: 4.8rem 2.4rem 4.8rem 2.4rem;
+  }
 }
 .s-newsletter .container .s-newsletter__form h3 {
   margin-bottom: 1.6rem;
 }
 .s-newsletter .container .s-newsletter__img {
   max-width: calc(50% - 4rem);
+}
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .s-newsletter .container .s-newsletter__img {
+    display: none;
+  }
 }
 .s-newsletter .container .s-newsletter__img img {
   border-top-right-radius: 2.4rem;
