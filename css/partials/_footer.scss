@@ -4,6 +4,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: $spacing-xxl;
 
     @include responsive(s) {
         height: auto;

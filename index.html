@@ -244,7 +244,7 @@
 					</div>
 				</div>
 
-				<div class="s-what-is__img" data-aos="fade-left">
+				<div class="s-what-is__img">
 					<img src="img/s-what-is_img.png" alt="" />
 				</div>
 			</div>
@@ -403,7 +403,7 @@
 						<tr>
 							<td class="table__td__willo">R$ 1.300,00</td>
 
-							<td class="table__td__expenses">Aluguel</td>
+							<td class="table__td__expenses" id="table__tip">Aluguel <img src="svg/tip-icon.svg" alt=""></td>
 
 							<td class="table__td__others">R$ 1.100,00</td>
 						</tr>
@@ -527,8 +527,9 @@
 		<script>
 			// With the above scripts loaded, you can call `tippy()` with a CSS
 			// selector and a `content` prop:
-			tippy('#mybutton', {
-				content: 'My tooltip!',
+			tippy('#table__tip', {
+				content: 'Valor depende das despesas fixas e eventuais do condomínio. Nosso papel é otimizar esses custos!',
+				trigger: 'click',
 			});
 		</script>
 

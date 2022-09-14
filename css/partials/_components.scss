@@ -68,3 +68,11 @@
 		padding-left: 3.2rem;
 	}
 }
+
+.tippy-content {
+	@include typeface-2(s);
+	padding: 1.2rem 1.6rem;
+
+
+}
+

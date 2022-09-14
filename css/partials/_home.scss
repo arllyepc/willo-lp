@@ -220,9 +220,10 @@ main {
 	.container {
 		display: flex;
 		justify-content: space-between;
-
+		height: 100%;
 		padding-top: $spacing-xl;
 		padding-bottom: $spacing-xl;
+		
 
 		@include responsive(s) {
 			flex-direction: column;
@@ -248,17 +249,21 @@ main {
 
 			.s-what-is__card {
 				margin-top: $spacing-md;
-
+	
 				width: 61rem;
 				position: absolute;
 				padding: 2.4rem 4.8rem;
 				background-color: $color-primary-medium;
+				
+				
 
 				@include responsive(s) {
 					max-width: calc(100% - 1.6rem);
 					padding: 3.2rem 2.4rem;
 					top: 42rem;
 				}
+
+				
 				h3 {
 					margin-bottom: $spacing-xxxs;
 					@include typeface-1(sm);
@@ -268,6 +273,7 @@ main {
 
 		.s-what-is__img {
 			max-width: 50%;
+			
 			@include responsive(s) {
 				max-width: 100%;
 				margin-top: $spacing-md;
@@ -372,7 +378,6 @@ main {
 	}
 
 	.s-compare__table {
-		
 		@include responsive(s) {
 			width: 100%;
 		}
@@ -410,7 +415,6 @@ main {
 			margin-top: 3.2rem;
 			width: 100%;
 			border-spacing: 2.4rem 0;
-			
 
 			@include responsive(s) {
 				border-spacing: 1.6rem 0;
@@ -464,7 +468,6 @@ main {
 					font-size: 1.4rem;
 					padding: 0;
 				}
-	
 			}
 
 			.table__th__expenses {
@@ -491,6 +494,10 @@ main {
 				font-weight: 700;
 				font-size: 1.4rem;
 				line-height: 150%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.8rem;
 				@include responsive(s) {
 					font-size: 1.2rem;
 				}
@@ -528,7 +535,7 @@ main {
 			@include responsive(s) {
 				display: none;
 			}
-	
+
 			img {
 				border-top-right-radius: 2.4rem;
 				border-bottom-right-radius: 2.4rem;
