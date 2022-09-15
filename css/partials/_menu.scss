@@ -102,6 +102,7 @@ header {
 						&::after {
 
 							content: '';
+							animation: active-link-bar 1s;
                             position: absolute;
 							height: 0.2rem;
 							width: 100%;

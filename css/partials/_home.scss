@@ -1,4 +1,4 @@
-main {
+.main {
 	margin-bottom: $spacing-xxl + $spacing-xl;
 	@include responsive(s) {
 		margin-bottom: $spacing-rg + $spacing-md;
@@ -72,6 +72,7 @@ main {
 
 .s-benefits {
 	.container {
+	
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
@@ -89,6 +90,10 @@ main {
 				position: absolute;
 				right: -3.2rem;
 				bottom: -3.2rem;
+				width: 8.8rem;
+				height: 8.8rem;
+
+								
 
 				@include responsive(s) {
 					right: 0;
@@ -223,6 +228,7 @@ main {
 		height: 100%;
 		padding-top: $spacing-xl;
 		padding-bottom: $spacing-xl;
+		overflow: hidden;
 		
 
 		@include responsive(s) {

@@ -1,7 +1,36 @@
 const menuBtn = document.querySelector('.menu-btn');
 const navbarMobile = document.querySelector('.navbar-mobile');
 const logo = document.querySelector('.logo-desktop');
-const linksMobile = document.querySelectorAll('li');
+const linksMobile = document.querySelectorAll('nav.navbar-mobile ul li');
+const linksDesktop = document.querySelectorAll('ul.menu-desktop li');
+const sections = document.querySelectorAll('section');
+console.log(linksDesktop);
+console.log(sections);
+
+window.addEventListener("scroll", ()=> {
+	let current = "";
+
+	sections.forEach(section => {
+		const sectionTop = section.offsetTop;
+		const sectionHeight = section.clientHeight;
+		if (scrollY > (sectionTop - sectionHeight /3) ) {
+
+			current = section.getAttribute("id");
+			console.log(current)
+	
+		}
+	})
+
+	
+
+	linksDesktop.forEach( linkDesktop => {
+		linkDesktop.firstChild.classList.remove("active");
+		if(linkDesktop.classList.contains(current)) {
+			linkDesktop.firstChild.classList.add("active")
+		}
+	})
+})
+
 linksMobile.forEach((el) => {
 	el.addEventListener('click', (event) => {
 		event.preventDefault();
@@ -9,13 +38,10 @@ linksMobile.forEach((el) => {
 		navbarMobile.classList.toggle('active');
 		logo.classList.toggle('active');
 		menuOpen = false;
-		
 	});
 });
 
 let menuOpen = false;
-
-
 
 menuBtn.addEventListener('click', () => {
 	if (!menuOpen) {
