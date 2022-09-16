@@ -4,36 +4,45 @@ const logo = document.querySelector('.logo-desktop');
 const linksMobile = document.querySelectorAll('nav.navbar-mobile ul li');
 const linksDesktop = document.querySelectorAll('ul.menu-desktop li');
 const sections = document.querySelectorAll('section');
+console.log(linksDesktop);
+console.log(sections)
 
+window.addEventListener('scroll', () => {
+	let current = '';
 
-/*window.addEventListener("scroll", ()=> {
-	let current = "";
-
-	sections.forEach(section => {
+	sections.forEach((section) => {
 		const sectionTop = section.offsetTop;
 		const sectionHeight = section.clientHeight;
-		if (scrollY > (sectionTop - sectionHeight /3) ) {
-
-			current = section.getAttribute("id");
-			console.log(current)
-	
+		if (scrollY > sectionTop - sectionHeight / 3) {
+			current = section.getAttribute('id');
+			console.log(current);
 		}
-	})
+	});
 
-	
+	linksDesktop.forEach((linkDesktop) => {
+		linkDesktop.firstElementChild.classList.remove("active");
+			
+		
 
-	linksDesktop.forEach( linkDesktop => {
-		linkDesktop.firstChild.classList.remove("active");
-		if(linkDesktop.classList.contains(current)) {
-			linkDesktop.firstChild.classList.add("active")
+		if (linkDesktop.classList.contains(current)) {
+			linkDesktop.firstElementChild.classList.add('active');
 		}
-	})
-})
-*/
+	});
+
+	linksMobile.forEach((linkMobile) => {
+		linkMobile.firstElementChild.classList.remove("active");
+			
+		
+
+		if (linkMobile.classList.contains(current)) {
+			linkMobile.firstElementChild.classList.add('active');
+		}
+	});
+});
 
 linksMobile.forEach((el) => {
 	el.addEventListener('click', (event) => {
-		event.preventDefault();
+		
 		menuBtn.classList.toggle('open');
 		navbarMobile.classList.toggle('active');
 		logo.classList.toggle('active');
