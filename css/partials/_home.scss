@@ -3,12 +3,26 @@
 	@include responsive(s) {
 		margin-bottom: $spacing-rg + $spacing-md;
 	}
+
+	@include responsive(m) {
+		margin-bottom: $spacing-rg + $spacing-md;
+	}
+
 	.container {
 		padding-top: 14.4rem;
 		display: flex;
 		justify-content: space-between;
 
 		@include responsive(s) {
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding-top: $spacing-rg + 8rem;
+		}
+
+		@include responsive(m) {
+			justify-content: center;
+			align-items: center;
 			flex-direction: column;
 			padding-top: $spacing-rg + 8rem;
 		}
@@ -17,6 +31,21 @@
 			max-width: 36.2rem;
 			display: flex;
 			flex-direction: column;
+
+			@include responsive(s) {
+				max-width: 100%;
+			}
+
+			@include responsive(m) {
+				max-width: 100%;
+				flex-direction: row;
+				flex-flow: wrap;
+				justify-content: space-evenly;
+
+				img {
+					max-width: 40%;
+				}
+			}
 
 			.main__imgs__mobile {
 				max-width: 100%;
@@ -31,6 +60,19 @@
 						max-width: calc(33% - 0.8rem);
 						margin-top: $spacing-xs;
 						margin-bottom: $spacing-xxs;
+					}
+				}
+
+				@include responsive(m) {
+					display: flex;
+					max-width: 50%;
+
+					img {
+						max-width: calc(33% - 0.8rem);
+
+						margin-top: $spacing-xs;
+						margin-bottom: $spacing-xxs;
+						margin-left: 1.6rem;
 					}
 				}
 			}
@@ -54,11 +96,19 @@
 						margin-bottom: 0.8rem;
 					}
 				}
+				@include responsive(m) {
+					max-width: 80%;
+					@include typeface-2(lg, mobile);
+				}
 			}
 		}
 
 		.main__imgs {
 			@include responsive(s) {
+				display: none;
+			}
+
+			@include responsive(m) {
 				display: none;
 			}
 			display: flex;
@@ -72,7 +122,6 @@
 
 .s-benefits {
 	.container {
-	
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
@@ -83,8 +132,18 @@
 			margin-bottom: $spacing-md + $spacing-rg;
 		}
 
+		@include responsive(m) {
+			flex-wrap: wrap;
+			margin-bottom: $spacing-md + $spacing-rg;
+			align-items: center;
+		}
+
 		.s-benefits__img {
 			position: relative;
+
+			@include responsive(m) {
+				max-width: 40%;
+			}
 
 			.s-benefits__ornament {
 				position: absolute;
@@ -92,8 +151,6 @@
 				bottom: -3.2rem;
 				width: 8.8rem;
 				height: 8.8rem;
-
-								
 
 				@include responsive(s) {
 					right: 0;
@@ -123,12 +180,27 @@
 			}
 
 			ul {
+				@include responsive(m) {
+					display: none;
+				}
+
 				li {
 					margin-bottom: $spacing-md;
 					@include responsive(s) {
 						margin-bottom: $spacing-sm;
 					}
 				}
+			}
+		}
+
+		.s-benefits__list__tablet {
+			display: none;
+
+			@include responsive(m) {
+				display: flex;
+				justify-content: space-between;
+				margin-top: $spacing-sm + 3.2rem;
+				gap: 1.6rem;
 			}
 		}
 	}
@@ -146,6 +218,12 @@
 
 		align-items: flex-start;
 		justify-content: space-between;
+
+		@include responsive(m) {
+			gap: 1.6rem;
+			justify-content: space-evenly;
+			align-items: center;
+		}
 
 		.s-where__text {
 			overflow-x: hidden;
@@ -202,6 +280,10 @@
 			max-width: 50%;
 			position: relative;
 
+			@include responsive(m) {
+				width: calc(50% - 3.2rem);
+			}
+
 			@include responsive(s) {
 				display: none;
 			}
@@ -209,6 +291,12 @@
 				position: absolute;
 				top: -3.2rem;
 				right: -3rem;
+
+				@include responsive(m) {
+					width: 6.4rem;
+					top: -2.4rem;
+					right: -1.6rem;
+				}
 			}
 		}
 	}
@@ -222,6 +310,10 @@
 		margin-bottom: $spacing-md;
 		height: 96rem;
 	}
+
+	@include responsive(m) {
+		height: 62rem;
+	}
 	.container {
 		display: flex;
 		justify-content: space-between;
@@ -229,11 +321,13 @@
 		padding-top: $spacing-xl;
 		padding-bottom: $spacing-xl;
 		overflow: hidden;
-		
 
 		@include responsive(s) {
 			flex-direction: column;
 			justify-content: flex-start;
+		}
+
+		@include responsive(m) {
 		}
 
 		.s-what-is__text {
@@ -241,6 +335,10 @@
 			h2 {
 				color: $color-neutral-ultralight;
 				margin-bottom: $spacing-xxxs;
+
+				@include responsive(m) {
+					@include typeface-1(lg, mobile);
+				}
 			}
 			max-width: 50%;
 			color: $color-neutral-ultralight;
@@ -255,13 +353,11 @@
 
 			.s-what-is__card {
 				margin-top: $spacing-md;
-	
+
 				width: 61rem;
 				position: absolute;
 				padding: 2.4rem 4.8rem;
 				background-color: $color-primary-medium;
-				
-				
 
 				@include responsive(s) {
 					max-width: calc(100% - 1.6rem);
@@ -269,7 +365,10 @@
 					top: 42rem;
 				}
 
-				
+				@include responsive(m) {
+					max-width: 48rem;
+				}
+
 				h3 {
 					margin-bottom: $spacing-xxxs;
 					@include typeface-1(sm);
@@ -279,10 +378,26 @@
 
 		.s-what-is__img {
 			max-width: 50%;
-			
+
 			@include responsive(s) {
 				max-width: 100%;
 				margin-top: $spacing-md;
+			}
+
+			.s-what-is__img__desktop {
+				display: block;
+
+				@include responsive(m) {
+					display: none;
+				}
+			}
+
+			.s-what-is__img__tablet {
+				display: none;
+
+				@include responsive(m) {
+					display: block;
+				}
 			}
 		}
 	}

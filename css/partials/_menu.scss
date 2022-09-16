@@ -243,6 +243,43 @@ header {
 			}
 		}
 	}
+	@include responsive(m) {
+		padding-top: 12.8rem;
+		right: 0;
+		top: 0;
+		position: fixed;
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		height: 50vh;
+
+		align-items: center;
+		
+		width: 100vw;
+		background: $color-neutral-ultralight;
+		
+		transition: all 0.3s ease-in-out;
+		transform: translateY(-100vh);
+
+		&.active {
+			transform: translateY(0);
+		}
+		ul {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+
+			li {
+				margin-bottom: 2.4rem;
+
+                a {
+                    @include typeface-2(md);
+                    color: $color-neutral-medium;
+
+                }
+			}
+		}
+	}
 }
 
 .logo-desktop {

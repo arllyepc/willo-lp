@@ -4,10 +4,9 @@ const logo = document.querySelector('.logo-desktop');
 const linksMobile = document.querySelectorAll('nav.navbar-mobile ul li');
 const linksDesktop = document.querySelectorAll('ul.menu-desktop li');
 const sections = document.querySelectorAll('section');
-console.log(linksDesktop);
-console.log(sections);
 
-window.addEventListener("scroll", ()=> {
+
+/*window.addEventListener("scroll", ()=> {
 	let current = "";
 
 	sections.forEach(section => {
@@ -30,6 +29,7 @@ window.addEventListener("scroll", ()=> {
 		}
 	})
 })
+*/
 
 linksMobile.forEach((el) => {
 	el.addEventListener('click', (event) => {
