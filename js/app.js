@@ -4,6 +4,13 @@ const logo = document.querySelector('.logo-desktop');
 const linksMobile = document.querySelectorAll('nav.navbar-mobile ul li');
 const linksDesktop = document.querySelectorAll('ul.menu-desktop li');
 const sections = document.querySelectorAll('section');
+const tables = document.querySelectorAll("table");
+tables[1].style.display = "none"
+const options = document.querySelectorAll("option");
+
+const selector = document.querySelector("select")
+console.log(tables, options, selector)
+
 
 window.addEventListener('scroll', () => {
 	let current = '';
@@ -57,3 +64,20 @@ menuBtn.addEventListener('click', () => {
 		menuOpen = false;
 	}
 });
+
+//Tabela
+
+selector.addEventListener("change", activeTableItem)
+
+function activeTableItem() {
+	if (selector.value === "willo-palmares") {
+		tables[1].style.display = "none"
+		tables[0].style.display = "block";
+	} else {
+		tables[0].style.display = "none"
+		tables[1].style.display = "block"
+	}
+}
+
+
+

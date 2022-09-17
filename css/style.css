@@ -2374,8 +2374,8 @@ footer .container .footer__media {
 .s-compare .s-compare__table table tr,
 .s-compare .s-compare__table table td {
   text-align: center;
-  width: 17rem;
-  padding: 1.6rem;
+  width: 18rem;
+  padding: 0.8rem 0.4rem;
   font-family: "Nunito";
 }
 @media screen and (max-width: 767.98px) and (min-width: 360px) {
@@ -2467,7 +2467,7 @@ footer .container .footer__media {
   font-family: "Nunito", sans-serif;
   line-height: 150%;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 @media screen and (max-width: 767.98px) and (min-width: 360px) {
   .s-compare .s-compare__table table .table__td__willo,
@@ -2480,6 +2480,16 @@ footer .container .footer__media {
 .s-compare .s-compare__table table .table__td__others {
     font-size: 1.2rem;
   }
+}
+.s-compare .s-compare__table table .table__td__willo__img {
+  position: relative;
+}
+.s-compare .s-compare__table table .table__td__willo__img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
 }
 .s-compare .s-compare__table table .table__td__expenses {
   font-weight: 700;
