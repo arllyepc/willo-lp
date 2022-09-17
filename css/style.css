@@ -2446,6 +2446,7 @@ footer .container .footer__media {
   }
 }
 .s-compare .s-compare__table table .table__th__expenses {
+  width: 12rem;
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 150%;
@@ -2492,6 +2493,7 @@ footer .container .footer__media {
   margin-top: -12px;
 }
 .s-compare .s-compare__table table .table__td__expenses {
+  width: 12rem;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 150%;
